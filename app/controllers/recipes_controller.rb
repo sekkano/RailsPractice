@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def index
     @recipes = Recipe.all
+    @title = "Recipes"
   end
 
   # GET /recipes/1

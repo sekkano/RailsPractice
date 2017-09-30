@@ -15,12 +15,10 @@
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= recipe.title %></td>
-        <td><%= recipe.ingredients %></td>
-        <td><%= recipe.instructions %></td>
-        <td><%= link_to 'Show', recipe %></td>
+        <td><%= link_to recipe.title, recipe %></td>
+        <td><%= time_ago_in_words(recipe.updated_at) %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Destroy', recipe,confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
