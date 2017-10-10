@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171009180455) do
+=======
+ActiveRecord::Schema.define(version: 20171009025204) do
+>>>>>>> 14f707a50f09f7ad9f72f0302d531efe4713e985
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +30,7 @@ ActiveRecord::Schema.define(version: 20171009180455) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "category_id"
+<<<<<<< HEAD
   end
 
   add_index "recipes", ["category_id"], name: "index_recipes_on_category_id"
@@ -36,6 +41,10 @@ ActiveRecord::Schema.define(version: 20171009180455) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+=======
+>>>>>>> 14f707a50f09f7ad9f72f0302d531efe4713e985
   end
+
+  add_index "recipes", ["category_id"], name: "index_recipes_on_category_id"
 
 end
